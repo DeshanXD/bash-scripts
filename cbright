@@ -1,0 +1,12 @@
+#!/bin/bash
+# Written By Deshan Basura @ 2020 March
+
+if [ $1 == "" ];
+then
+    echo 300 | sudo tee /sys/class/backlight/intel_backlight/brightness
+else
+    # read -p "Enter the brightness level: " br_g
+    echo $1 | sudo tee /sys/class/backlight/intel_backlight/brightness
+fi
+
+    
